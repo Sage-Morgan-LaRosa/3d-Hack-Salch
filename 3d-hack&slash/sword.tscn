@@ -5,4 +5,4 @@
 [node name="Sword" type="Node3D" unique_id=2009765519]
 
 [node name="sword" parent="." unique_id=572204847 instance=ExtResource("1_74bdg")]
-transform = Transform3D(0.25, 0, 0, 0, 0.35, 0, 0, 0, 0.39999998, -0.055926442, -0.002888441, 0.041373968)
+transform = Transform3D(0.25, 0, 0, 0, 0.35, 0, 0, 0, 0.39999998, -0.00052523613, -0.002888441, 0.041373968)

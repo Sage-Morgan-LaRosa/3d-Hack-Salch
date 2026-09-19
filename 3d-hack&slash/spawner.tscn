@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d3e1ojxy3s1dw"]
+
+[ext_resource type="Script" uid="uid://chqvn5kwbyv8q" path="res://spawner.gd" id="1_sjx1r"]
+[ext_resource type="PackedScene" uid="uid://di460madkt5rg" path="res://Models/spawner.blend" id="2_ttk4a"]
+
+[node name="Spawner" type="Node3D" unique_id=949302427]
+script = ExtResource("1_sjx1r")
+
+[node name="Timer" type="Timer" parent="." unique_id=296512340]
+unique_name_in_owner = true
+wait_time = 2.5
+autostart = true
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=993391753]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.314333, 0.82977414)
+
+[node name="spawner" parent="." unique_id=72029522 instance=ExtResource("2_ttk4a")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,18 +1,56 @@
 [gd_scene format=3 uid="uid://bonuo5t4luhd0"]
 
-[ext_resource type="Script" uid="uid://dvqfj6qunvxso" path="res://hs_main.gd" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://dvqfj6qunvxso" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://b1rv2c4l2xes" path="res://player.tscn" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cnia3s5aq61qm" path="res://arena.tscn" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://d3e1ojxy3s1dw" path="res://spawner.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cv66im0vj1gqq" path="res://mob.tscn" id="5_lquwl"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lquwl"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0.19414508, 0.18639508, 0.17739508, 1)
+ground_horizon_color = Color(0.19414508, 0.18639508, 0.17739508, 1)
+
+[sub_resource type="Sky" id="Sky_7mycd"]
+sky_material = SubResource("ProceduralSkyMaterial_lquwl")
+
+[sub_resource type="Environment" id="Environment_272bh"]
+background_mode = 2
+sky = SubResource("Sky_7mycd")
+glow_enabled = true
 
 [node name="Main" type="Node3D" unique_id=1444613440]
 script = ExtResource("1_h2yge")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2125938625]
+environment = SubResource("Environment_272bh")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1312648339]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 33.27755, 0)
 shadow_enabled = true
 
+[node name="Label" type="Label" parent="." unique_id=1695280968]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="Player" parent="." unique_id=1394864689 instance=ExtResource("2_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.638072, 2.4985342, -0.37352562)
 
 [node name="arena" parent="." unique_id=1749047509 instance=ExtResource("3_lquwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.0734756, -1.741682, 0, -2.7843142)
+transform = Transform3D(0.8442135, 0, 0, 0, 1, 0, 0, 0, 1.2593887, -1.6851025, -1.357666, 2.6654043)
+
+[node name="Spawner" parent="." unique_id=949302427 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.349, -0.50569344, 19.999067)
+
+[node name="Spawner2" parent="." unique_id=178372347 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.324463, -0.52948, 24.270386)
+
+[node name="Spawner3" parent="." unique_id=337274118 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.985962, -0.52948, -25.185669)
+
+[node name="Spawner4" parent="." unique_id=1813375473 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.063965, -0.6864052, -27.626587)
+
+[node name="Mob" parent="." unique_id=1106947180 instance=ExtResource("5_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.018433, 2.369629, 22.167725)

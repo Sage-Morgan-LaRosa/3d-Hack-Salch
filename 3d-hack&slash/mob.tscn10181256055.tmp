@@ -17,6 +17,4 @@ shape = SubResource("SphereShape3D_ek160")
 
 [node name="Timer" type="Timer" parent="." unique_id=854157037]
 unique_name_in_owner = true
-one_shot = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+autostart = true
