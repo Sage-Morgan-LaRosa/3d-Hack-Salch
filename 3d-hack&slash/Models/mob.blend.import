@@ -41,8 +41,13 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"Material.001": {
+"Material": {
 "use_external/enabled": true,
+"use_external/fallback_path": "res://Models/eyes.tres",
+"use_external/path": "uid://duomj5uo3yksy"
+},
+"Material.001": {
+"use_external/enabled": false,
 "use_external/fallback_path": "res://Models/Mob.tres",
 "use_external/path": "uid://dlndae0dwb26e"
 }
