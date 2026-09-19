@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bonuo5t4luhd0"]
+
+[ext_resource type="Script" uid="uid://dvqfj6qunvxso" path="res://hs_main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://b1rv2c4l2xes" path="res://player.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cnia3s5aq61qm" path="res://arena.tscn" id="3_lquwl"]
+
+[node name="Main" type="Node3D" unique_id=1444613440]
+script = ExtResource("1_h2yge")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1312648339]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 33.27755, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." unique_id=1394864689 instance=ExtResource("2_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.638072, 2.4985342, -0.37352562)
+
+[node name="arena" parent="." unique_id=1749047509 instance=ExtResource("3_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.0734756, -1.741682, 0, -2.7843142)

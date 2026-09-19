@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bm5jnetsap3af"]
+
+[ext_resource type="PackedScene" uid="uid://cslvjj774uj1" path="res://Models/sword.blend" id="1_74bdg"]
+
+[node name="Sword" type="Node3D" unique_id=2009765519]
+
+[node name="sword" parent="." unique_id=572204847 instance=ExtResource("1_74bdg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.35, 0, 0, 0, 0.39999998, -0.055926442, -0.002888441, 0.041373968)

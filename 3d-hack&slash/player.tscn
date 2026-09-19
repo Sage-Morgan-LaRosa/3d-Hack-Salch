@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b1rv2c4l2xes"]
+
+[ext_resource type="PackedScene" uid="uid://3garrx3xon8e" path="res://Models/player.blend" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://d1db6qq65xrfb" path="res://player.gd" id="1_onrkg"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ek160"]
+radius = 0.88286537
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_onrkg"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=2110170150]
+script = ExtResource("1_onrkg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=244436171]
+shape = SubResource("SphereShape3D_ek160")
+
+[node name="player" parent="." unique_id=1671368145 instance=ExtResource("1_4flbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002, -0.004, 0)
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=2003068045]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.023357451, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot" unique_id=819164839]
+transform = Transform3D(-1, 4.1042508e-08, -7.7189725e-08, 0, 0.88294756, 0.46947157, 8.742278e-08, 0.46947157, -0.88294756, 0, 0, 0)
+shape = SubResource("SphereShape3D_onrkg")
+spring_length = 10.0
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=1276161593]
+unique_name_in_owner = true
