@@ -3,8 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://7632r10yi1eo" path="res://Models/mob.blend" id="1_dy6sc"]
 [ext_resource type="Script" uid="uid://bgtwmslrs0i4e" path="res://mob.gd" id="1_nokgg"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_ek160"]
-radius = 0.8255012
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lquwl"]
+radius = 1.1772461
+height = 6.9466553
 
 [node name="Mob" type="RigidBody3D" unique_id=1454396871]
 script = ExtResource("1_nokgg")
@@ -13,7 +14,8 @@ script = ExtResource("1_nokgg")
 unique_name_in_owner = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=956724322]
-shape = SubResource("SphereShape3D_ek160")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014296532, 3.4274545, 0)
+shape = SubResource("CapsuleShape3D_lquwl")
 
 [node name="Timer" type="Timer" parent="." unique_id=854157037]
 unique_name_in_owner = true

@@ -2,7 +2,7 @@ extends RigidBody3D
 
 
 var health = 3
-var speed = randf_range(2.0, 4.0)
+var speed = randf_range(4.0, 8.0)
 
 @onready var mob = %mob
 @onready var timer = %Timer
