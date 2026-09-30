@@ -20,7 +20,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002, -0.004, 0)
 
 [node name="CameraPivot" type="Node3D" parent="." unique_id=2003068045]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.023357451, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.412428, 0)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot" unique_id=819164839]
 transform = Transform3D(-1, 4.1042508e-08, -7.7189725e-08, 0, 0.88294756, 0.46947157, 8.742278e-08, 0.46947157, -0.88294756, 0, 0, 0)
@@ -31,4 +31,4 @@ spring_length = 10.0
 unique_name_in_owner = true
 
 [node name="Sword" parent="." unique_id=2009765519 instance=ExtResource("2_onrkg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3907471, 0, -0.15715027)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7889767, 2.263802, 0.5591003)
