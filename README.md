@@ -2,19 +2,9 @@
 
 
 
-add models
+Movement \[WASD]
 
-
-
-add martials
-
-
-
-add movement
-
-
-
-added character moment
+Quit \[ESC]
 
 
 
@@ -33,4 +23,9 @@ https://www.youtube.com/watch?v=JlgZtOFMdfc
 https://www.youtube.com/shorts/JLtcZj8-JOQ
 
 https://www.youtube.com/watch?v=6WSim6koMNs
+
+
+
+Ui
+https://www.youtube.com/watch?v=7VeNHNZ9zlI\&t=802s
 
