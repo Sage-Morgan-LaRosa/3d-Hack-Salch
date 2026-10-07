@@ -19,6 +19,7 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 
 [node name="CreditsMenu" type="VBoxContainer" parent="CenterContainer" unique_id=1602446458]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 16
 
@@ -39,7 +40,6 @@ text = "Back
 "
 
 [node name="MainButtons" type="VBoxContainer" parent="CenterContainer" unique_id=67208393]
-visible = false
 layout_mode = 2
 theme_override_constants/separation = 16
 
