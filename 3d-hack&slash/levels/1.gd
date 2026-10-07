@@ -1,5 +1,6 @@
 extends Node3D
 
+
 var player_score = 0
 
 @onready var label := %Label

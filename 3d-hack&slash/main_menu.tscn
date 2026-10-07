@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://ddn1jkkhyilt3"]
+
+[ext_resource type="Script" uid="uid://c2w5o2ntglh5t" path="res://main_menu.gd" id="1_06t4h"]
+
+[node name="MainMenu" type="Node2D" unique_id=1591660171]
+script = ExtResource("1_06t4h")
+
+[node name="Title" type="Label" parent="." unique_id=858440580]
+offset_right = 1920.0
+offset_bottom = 500.0
+theme_override_font_sizes/font_size = 300
+text = "Hack and Slash"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=407092479]
+offset_top = 500.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="MainButtons" type="VBoxContainer" parent="CenterContainer" unique_id=67208393]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="play" type="Button" parent="CenterContainer/MainButtons" unique_id=163287193]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "Play"
+
+[node name="settings" type="Button" parent="CenterContainer/MainButtons" unique_id=1898275262]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "Settings"
+
+[node name="credits" type="Button" parent="CenterContainer/MainButtons" unique_id=194139426]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "Credits"
+
+[node name="quit" type="Button" parent="CenterContainer/MainButtons" unique_id=1033316268]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "Quit"
+
+[node name="SettingsMenu" type="VBoxContainer" parent="." unique_id=526138413]
+visible = false
+offset_left = 842.0
+offset_top = 619.0
+offset_right = 1001.0
+offset_bottom = 770.0
+theme_override_constants/separation = 16
+
+[node name="back" type="Button" parent="SettingsMenu" unique_id=174853513]
+custom_minimum_size = Vector2(353, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 75
+text = "Back
+"
+
+[node name="Fullscreen" type="CheckBox" parent="SettingsMenu" unique_id=1588526542]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "Fullscreen"
+
+[node name="CreditsMenu" type="VBoxContainer" parent="." unique_id=1602446458]
+visible = false
+offset_left = 356.0
+offset_top = 649.0
+offset_right = 1557.0
+offset_bottom = 814.0
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="CreditsMenu" unique_id=1419879185]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 120
+text = "Sage Morgan-LaRosa"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="back" type="Button" parent="CreditsMenu" unique_id=219605264]
+custom_minimum_size = Vector2(353, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 75
+text = "Back
+"
+
+[connection signal="pressed" from="CenterContainer/MainButtons/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CenterContainer/MainButtons/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="CenterContainer/MainButtons/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CenterContainer/MainButtons/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="SettingsMenu/back" to="." method="_on_back_pressed"]
+[connection signal="toggled" from="SettingsMenu/Fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="pressed" from="CreditsMenu/back" to="." method="_on_back_pressed"]
