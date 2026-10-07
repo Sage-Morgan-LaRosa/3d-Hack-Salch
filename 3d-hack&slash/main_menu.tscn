@@ -8,7 +8,7 @@ script = ExtResource("1_06t4h")
 [node name="Title" type="Label" parent="." unique_id=858440580]
 offset_right = 1920.0
 offset_bottom = 500.0
-theme_override_font_sizes/font_size = 300
+theme_override_font_sizes/font_size = 250
 text = "Hack and Slash"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -18,7 +18,28 @@ offset_top = 500.0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
+[node name="CreditsMenu" type="VBoxContainer" parent="CenterContainer" unique_id=1602446458]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="CenterContainer/CreditsMenu" unique_id=1419879185]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Sage Morgan-LaRosa"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="back" type="Button" parent="CenterContainer/CreditsMenu" unique_id=219605264]
+custom_minimum_size = Vector2(353, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 75
+text = "Back
+"
+
 [node name="MainButtons" type="VBoxContainer" parent="CenterContainer" unique_id=67208393]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 16
 
@@ -42,15 +63,12 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 75
 text = "Quit"
 
-[node name="SettingsMenu" type="VBoxContainer" parent="." unique_id=526138413]
+[node name="SettingsMenu" type="VBoxContainer" parent="CenterContainer" unique_id=526138413]
 visible = false
-offset_left = 842.0
-offset_top = 619.0
-offset_right = 1001.0
-offset_bottom = 770.0
+layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="back" type="Button" parent="SettingsMenu" unique_id=174853513]
+[node name="back" type="Button" parent="CenterContainer/SettingsMenu" unique_id=174853513]
 custom_minimum_size = Vector2(353, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -58,39 +76,15 @@ theme_override_font_sizes/font_size = 75
 text = "Back
 "
 
-[node name="Fullscreen" type="CheckBox" parent="SettingsMenu" unique_id=1588526542]
+[node name="Fullscreen" type="CheckBox" parent="CenterContainer/SettingsMenu" unique_id=1588526542]
 layout_mode = 2
 theme_override_font_sizes/font_size = 75
 text = "Fullscreen"
 
-[node name="CreditsMenu" type="VBoxContainer" parent="." unique_id=1602446458]
-visible = false
-offset_left = 356.0
-offset_top = 649.0
-offset_right = 1557.0
-offset_bottom = 814.0
-theme_override_constants/separation = 16
-
-[node name="Label" type="Label" parent="CreditsMenu" unique_id=1419879185]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 120
-text = "Sage Morgan-LaRosa"
-horizontal_alignment = 1
-autowrap_mode = 2
-
-[node name="back" type="Button" parent="CreditsMenu" unique_id=219605264]
-custom_minimum_size = Vector2(353, 0)
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 75
-text = "Back
-"
-
+[connection signal="pressed" from="CenterContainer/CreditsMenu/back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="CenterContainer/MainButtons/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CenterContainer/MainButtons/settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="CenterContainer/MainButtons/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="CenterContainer/MainButtons/quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="SettingsMenu/back" to="." method="_on_back_pressed"]
-[connection signal="toggled" from="SettingsMenu/Fullscreen" to="." method="_on_fullscreen_toggled"]
-[connection signal="pressed" from="CreditsMenu/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CenterContainer/SettingsMenu/back" to="." method="_on_back_pressed"]
+[connection signal="toggled" from="CenterContainer/SettingsMenu/Fullscreen" to="." method="_on_fullscreen_toggled"]
