@@ -26,7 +26,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.412428, 0)
 [node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot" unique_id=819164839]
 transform = Transform3D(-1, 4.1042508e-08, -7.7189725e-08, 0, 0.88294756, 0.46947157, 8.742278e-08, 0.46947157, -0.88294756, 0, 0, 0)
 shape = SubResource("SphereShape3D_onrkg")
-spring_length = 10.0
+spring_length = 20.0
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=1276161593]
 unique_name_in_owner = true
