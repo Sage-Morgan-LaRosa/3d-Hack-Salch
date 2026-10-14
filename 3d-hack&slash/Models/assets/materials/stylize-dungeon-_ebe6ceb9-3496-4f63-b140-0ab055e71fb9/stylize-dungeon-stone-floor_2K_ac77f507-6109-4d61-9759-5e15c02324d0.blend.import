@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dfqhvnnkaos53"
-path="res://.godot/imported/stylize-dungeon-stone-floor_2K_ac77f507-6109-4d61-9759-5e15c02324d0.blend-7a029900c83b2e00238cd148ce633138.scn"
+valid=false
 
 [deps]
 
 source_file="res://Models/assets/materials/stylize-dungeon-_ebe6ceb9-3496-4f63-b140-0ab055e71fb9/stylize-dungeon-stone-floor_2K_ac77f507-6109-4d61-9759-5e15c02324d0.blend"
-dest_files=["res://.godot/imported/stylize-dungeon-stone-floor_2K_ac77f507-6109-4d61-9759-5e15c02324d0.blend-7a029900c83b2e00238cd148ce633138.scn"]
 
 [params]
 

@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ep8lfy66li2f"
-path="res://.godot/imported/mob.blend-ebb8c336405af93d30bc475f01a6460e.scn"
+valid=false
 
 [deps]
 
 source_file="res://Models/mob.blend"
-dest_files=["res://.godot/imported/mob.blend-ebb8c336405af93d30bc475f01a6460e.scn"]
 
 [params]
 

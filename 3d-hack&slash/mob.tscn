@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cv66im0vj1gqq"]
 
 [ext_resource type="Script" uid="uid://bgtwmslrs0i4e" path="res://mob.gd" id="1_nokgg"]
-[ext_resource type="PackedScene" uid="uid://bqikm8qt183qh" path="res://skelly.tscn" id="3_ubaqv"]
+[ext_resource type="PackedScene" uid="uid://de8waa1na382x" path="res://Models/mob.glb" id="2_nokgg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lquwl"]
 radius = 1.1772461
@@ -10,7 +10,7 @@ height = 6.9466553
 [node name="Mob" type="CharacterBody3D" unique_id=1114538190]
 script = ExtResource("1_nokgg")
 
-[node name="mob" parent="." unique_id=1420605896 instance=ExtResource("3_ubaqv")]
+[node name="mob" parent="." unique_id=424284059 instance=ExtResource("2_nokgg")]
 unique_name_in_owner = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=956724322]

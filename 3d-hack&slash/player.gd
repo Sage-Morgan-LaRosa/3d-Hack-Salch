@@ -6,7 +6,7 @@ extends CharacterBody3D
 @export var tilt_lower_limit := -PI / 8.0
 
 @export_group("Movement")
-@export var move_speed := 8.0
+@export var move_speed := 15.0
 @export var acceleration := 20.0
 
 var _camera_input_direction := Vector2.ZERO
